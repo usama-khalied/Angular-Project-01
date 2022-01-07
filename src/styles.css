@@ -1,0 +1,333 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* The side navigation menu */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/ngx-toastr/toastr.css";
+@import "../node_modules/@ng-select/ng-select/themes/default.theme.css";
+@import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css";
+@import "menuStyles.css";
+@import "matTable.css";
+:root {
+  --main-bg-color: #0f75bd;
+  --main-color: white;
+  --border-color: #4f93dc;
+  /* --main-bg-color: yellow;
+  --main-color: black; */
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/fonts/Montserrat-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(/fonts/Poppins-SemiBold.ttf) format("truetype");
+  font-weight: 400;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  font-family: Poppins-SemiBold, "Helvetica Neue", sans-serif;
+}
+
+.card-body {
+  color: var(--main-bg-color) !important;
+}
+
+.bg-dark {
+  background-color: var(--main-bg-color) !important;
+  color: var(--main-color) !important;
+}
+
+.navbar-dark {
+  background-color: var(--main-bg-color) !important;
+  color: var(--main-color) !important;
+}
+
+.bg-light {
+  background-color: var(--main-color) !important;
+  color: var(--main-bg-color) !important;
+}
+
+li.list-group-item {
+  border-color: var(--border-color);
+  cursor: pointer;
+}
+
+li.list-group-item :hover {
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.is-active {
+  cursor: default;
+  text-decoration: none;
+  color: gray;
+}
+
+.jumbotron {
+  padding-top: 0px;
+  background: #fff;
+}
+
+.form-control,
+.input-group-text {
+  border: 1px solid var(--border-color);
+  font-size: 80%;
+}
+
+label,
+.btn {
+  font-size: 80%;
+}
+
+table.table-hover tbody tr:hover {
+  cursor: pointer;
+}
+
+.bg-light {
+  background-color: #afd0f1 !important;
+}
+
+.validation-error {
+  font-size: 90%;
+  color: red;
+}
+
+small {
+  font-size: 80%;
+}
+
+i {
+  margin-right: 5px;
+}
+
+.ng-select {
+  padding: 0px;
+  height: 100%;
+  border: 0;
+  /* Added by me */
+  border: 1px solid var(--main-color);
+}
+
+.card-header {
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+}
+
+.card-body {
+  border-color: var(--main-bg-color);
+  border-style: solid;
+  border-width: 0.5px;
+  border-radius: 5px;
+}
+
+.mat-card:not([class*="mat-elevation-z"]) {
+  box-shadow: 0px 2px 1px -1px var(--main-bg-color),
+    0px 1px 1px 0px var(--main-bg-color), 0px 1px 3px 0px var(--main-bg-color);
+}
+
+.btn-outline-warning {
+  color: rgba(0, 0, 0, 0.9) !important;
+  border-color: #afd0f1 !important;
+}
+
+.btn-outline-warning:hover {
+  color: black !important;
+  background-color: #afd0f1 !important;
+}
+
+/* Scrollable Div */
+
+.scroll-div {
+  width: 100%;
+  overflow-x: auto;
+  height: 500px;
+  display: inline-block;
+}
+
+/* Scrollable Div */
+
+/* Buttons */
+
+.btn-primary {
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  border-color: var(--border-color);
+}
+
+.btn-primary:hover {
+  color: var(--main-color);
+  background-color: var(--main-color);
+  border-color: var(--border-color);
+}
+
+.btn-primary.dropdown-toggle {
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  border-color: var(--border-color);
+}
+
+.btn-outline-primary {
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  border-color: var(--border-color);
+}
+
+.btn-outline-primary:hover {
+  color: var(--main-color);
+  background-color: var(--main-color);
+  border-color: var(--border-color);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  border-color: var(--border-color);
+}
+
+.mat-raised-button {
+  color: var(--main-color) !important;
+  background-color: var(--main-bg-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Card */
+
+.card {
+  border-color: var(--border-color);
+}
+
+.card-header {
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  border-color: var(--border-color);
+  font-weight: bold;
+}
+
+.card-body {
+  color: var(--main-color);
+  border-color: var(--border-color);
+}
+
+.card-text,
+.card-title {
+  color: var(--main-bg-color);
+  border-color: black;
+}
+
+.btn.btn-link {
+  color: var(--main-color) !important;
+}
+
+/* List Group */
+
+.list-group-item.active {
+  z-index: 2;
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  border-color: var(--border-color);
+}
+
+.list-group-item {
+  border-color: var(--border-color);
+}
+
+/* Table Fixed Header */
+
+.p-datatable table {
+  font-size: smaller;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+}
+
+.tableFixHead {
+  overflow-y: auto;
+  height: 400px;
+}
+
+.tableFixHead thead th {
+  position: sticky;
+  top: 0;
+}
+
+table {
+  border-collapse: collapse;
+  /* width: 100%; */
+}
+
+th,
+td {
+  padding: 2px 2px;
+  vertical-align: top;
+}
+
+/* th {
+  background: #eee;
+} */
+
+.Image_Center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 70%; */
+}
+
+/* Mat Dialog */
+
+.mat-dialog-container {
+  padding: 3px !important;
+}
+
+/* Table Fixed Header */
+
+/* For Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(67, 70, 243, 0.3); */
+  -webkit-box-shadow: inset 0 0 6px var(--main-bg-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(58, 101, 241, 0.5); */
+  -webkit-box-shadow: inset 0 0 6px var(--main-bg-color);
+}
+
+/* For Scrollbar */
+
+.p-sortable-column-icon {
+  height: 10px !important;
+  width: 10px !important;
+}
+
+.pi-sort-alt:before {
+  content: "" !important;
+}

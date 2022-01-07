@@ -1,0 +1,51 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a routerLink="/sys-master-codes">System Codes</a>
+  <a routerLink="/purchase-order">Purchase Order</a>
+  <a routerLink="/goods-received">GRN Issuance</a>
+  <a routerLink="/goods-received-confirm">GRN Confirmed</a>
+  <a routerLink="/goods-received-post">GRN Posting</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <img
+    src="../../../favicon.ico"
+    style="width: 40px; height: 40px; margin-right: 10px"
+    alt=""
+    srcset=""
+  />
+  <a class="navbar-brand" href="#">Price-Control</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <!-- <span class="nav-item nav-link" (click)="openNav()"
+      ><i
+        class="fa fa-ellipsis-v"
+        aria-hidden="true"
+        style="color: white; font-size: 20px; cursor: pointer"
+      ></i
+    ></span> -->
+    <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link active" routerLink="/sys-master-codes"
+        >Master Codes</a
+      >
+      <!-- <a class="nav-item nav-link" href="#">Features</a>
+      <a class="nav-item nav-link" href="#">Pricing</a>
+      <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+    </div>
+  </div>
+</nav>
+
+<!-- Use any element to open the sidenav -->
