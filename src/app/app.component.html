@@ -1,1 +1,20 @@
-<app-menu></app-menu> <router-outlet></router-outlet>
+<input type="text" [(ngModel)]="data" id="ngModel">
+
+
+<h2 [textContent]="title"></h2>
+
+<h2>{{this.data}}</h2>
+
+
+
+
+
+
+<input type="text" (keyup)="setText($event)"/>
+<br/>
+<button type="text" (click)="Operation('plus')">+</button>
+<button type="text" (click)="Operation('minus')">-</button>
+<p> Font Size : {{this.fontSize}} </p>
+<hr/>
+<h2></h2>
+<p [style.fontSize.px]="this.fontSize"> {{this.para}}</p>
