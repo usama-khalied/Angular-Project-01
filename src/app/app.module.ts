@@ -7,6 +7,13 @@ import { TestingComponent } from './testing/testing.component';
 import { CounterComponent } from './testing/counter/counter.component';
 import { PrvsobsComponent } from './prvsobs/prvsobs.component';
 import { ConsvsnginitComponent } from './consvsnginit/consvsnginit.component';
+import { ParentComponent } from './ngContent/parent/parent.component';
+import { ChildComponent } from './ngContent/child/child.component';
+import { LoginComponent } from './jwt-authentication/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './jwt-authentication/profile/profile.component';
+
+
 
 @NgModule({
   declarations: [
@@ -14,12 +21,18 @@ import { ConsvsnginitComponent } from './consvsnginit/consvsnginit.component';
     TestingComponent,
     CounterComponent,
     PrvsobsComponent,
-    ConsvsnginitComponent
+    ConsvsnginitComponent,
+    ParentComponent,
+    ChildComponent,
+    LoginComponent,
+    ProfileComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
