@@ -10,9 +10,9 @@ import { ConsvsnginitComponent } from './consvsnginit/consvsnginit.component';
 import { ParentComponent } from './ngContent/parent/parent.component';
 import { ChildComponent } from './ngContent/child/child.component';
 import { LoginComponent } from './jwt-authentication/login/login.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule , HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProfileComponent } from './jwt-authentication/profile/profile.component';
-
+import { HeadersInterceptor } from './interceptors/headers.interceptor';
 
 
 @NgModule({
@@ -34,7 +34,9 @@ import { ProfileComponent } from './jwt-authentication/profile/profile.component
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:HeadersInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
