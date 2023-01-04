@@ -10,19 +10,20 @@ export class UserService {
 
   loginService(data: any) {
     this.http
-      .post('http://localhost:5000/login', data)
+      .post('http://localhost:4000/signin',data)
       .subscribe((res: any) => {
         localStorage.setItem('token', res.token);
         this.router.navigate(['/profile']);
       });
+      console.log(localStorage.getItem('token'));
   }
     profile(){
-    let headers = new HttpHeaders().set("Authorization",`bearer ${localStorage.getItem('token')}`)
+    let headers = new HttpHeaders().set("Authorization",`bearer ${localStorage.getItem('token')}`);
     this.http.post("http://localhost:5000/profile",{},{headers}).subscribe((res:any) => {
       console.log(res)
-    })  
+    });  
   }
   getToken(){
-    return "Hellow"
+    return localStorage.getItem('token')
   }
 }

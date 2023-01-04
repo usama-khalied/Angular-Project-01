@@ -5,7 +5,7 @@ import { ProfileComponent } from './jwt-authentication/profile/profile.component
 import { TestingComponent } from './testing/testing.component';
 
 const routes: Routes = [
-{component:LoginComponent,path:''},
+// {component:LoginComponent,path:''},
 {component:ProfileComponent,path:'profile'}
 
 ];
