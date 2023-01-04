@@ -13,6 +13,8 @@ import { LoginComponent } from './jwt-authentication/login/login.component';
 import { HttpClientModule , HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProfileComponent } from './jwt-authentication/profile/profile.component';
 import { HeadersInterceptor } from './interceptors/headers.interceptor';
+import { RateComponent } from './ngDoCheck/rate/rate.component';
+import { ParentDocheckComponent } from './ngDoCheck/parent-docheck/parent-docheck.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { HeadersInterceptor } from './interceptors/headers.interceptor';
     ChildComponent,
     LoginComponent,
     ProfileComponent,
+    RateComponent,
+    ParentDocheckComponent,
 
   ],
   imports: [
