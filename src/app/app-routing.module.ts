@@ -9,7 +9,7 @@ import { YResolveService } from './resolve-guard/y-resolve.service';
 import { TestingComponent } from './testing/testing.component';
 
 const routes: Routes = [
-//   {component:DashboardComponent,path:'dashboard'},
+//   // {component:DashboardComponent,path:'dashboard'},
 // {component:DashboardComponent,path:'',pathMatch:'dashboard'},
 // {component:ProfileComponent,path:'profile'},
 {component:ResolveUserComponent,path:'Resolve-user',resolve:{course:YResolveService}},

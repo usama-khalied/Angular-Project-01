@@ -21,7 +21,7 @@ export class HeadersInterceptor implements HttpInterceptor {
       }
     })
     console.log(request)
-    return next.handle(request);
+    return next.handle(tokenizedReq);
   }
 }
 
