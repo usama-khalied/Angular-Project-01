@@ -10,12 +10,16 @@ import { ConsvsnginitComponent } from './consvsnginit/consvsnginit.component';
 import { ParentComponent } from './ngContent/parent/parent.component';
 import { ChildComponent } from './ngContent/child/child.component';
 import { LoginComponent } from './jwt-authentication/login/login.component';
-import { HttpClientModule , HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProfileComponent } from './jwt-authentication/profile/profile.component';
 import { HeadersInterceptor } from './interceptors/headers.interceptor';
 import { RateComponent } from './ngDoCheck/rate/rate.component';
 import { ParentDocheckComponent } from './ngDoCheck/parent-docheck/parent-docheck.component';
-
+import { GoogleLoginComponent } from './goolgeLogin/google-login/google-login.component';
+import { DashboardComponent } from './resolve-guard/dashboard/dashboard.component';
+import { ResolveUserComponent } from './resolve-guard/user/resolve-user.component';
+import { ResolveLoginComponent } from './resolve-guard/login/resolve-login.component';
+import { YResolveService } from './resolve-guard/y-resolve.service';
 
 @NgModule({
   declarations: [
@@ -30,17 +34,16 @@ import { ParentDocheckComponent } from './ngDoCheck/parent-docheck/parent-dochec
     ProfileComponent,
     RateComponent,
     ParentDocheckComponent,
-
+    GoogleLoginComponent,
+    DashboardComponent,
+    ResolveUserComponent,
+    ResolveLoginComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
-    {provide:HTTP_INTERCEPTORS,useClass:HeadersInterceptor,multi:true}
+    { provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true },
+    YResolveService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
